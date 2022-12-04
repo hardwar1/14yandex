@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 16px;
+}
+
+html,
+body {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+  font-family: "YandexSansText", sans-serif;
+	font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000;
+  background-color: #ffde40;
+}
+
+.container {
+  max-width: 960px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &--sm {
+    
+  }
+
+  &--big {
+    max-width: 1110px;
+  }
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
+.hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

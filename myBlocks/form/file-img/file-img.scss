@@ -1,0 +1,27 @@
+.form {
+  &__file-label {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #27ae60;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: rgb(204, 252, 220);
+    }
+  }
+
+  &__file:focus + svg {
+    fill: #27ae60;
+  }
+
+  &__preview {
+    margin-bottom: 30px;
+    img {
+      height: 60px;
+    }
+  }
+}

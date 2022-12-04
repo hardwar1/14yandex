@@ -1,0 +1,79 @@
+.action-button {
+  font-size: 13px;
+  min-width: 100px;
+  background-color: #27ae60;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27ae60;
+  }
+}
+
+.progressbar {
+  margin: 0 auto 30px;
+  position: relative;
+  height: 45px;
+  width: 238px;
+  counter-reset: step;
+
+  &:after,
+  &:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    z-index: -1;
+    transition: width 1s;
+  }
+
+  &:after {
+    background-color: #27ae60;
+    width: var(--progressbar-width);
+  }
+
+  &__item {
+    list-style-type: none;
+    color: transparent;
+    text-transform: uppercase;
+    font-size: 9px;
+    position: absolute;
+    width: fit-content;
+    left: --progressbar-left;
+    transform: translateX(-50%);
+    transition: color 0.3s;
+
+    &:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 20px;
+      line-height: 2;
+      display: block;
+      font-size: 10px;
+      color: #333;
+      background-color: white;
+      border-radius: 3px;
+      margin: 0 auto 5px auto;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    &--active:before {
+      background-color: #27ae60;
+      color: white;
+      transition: background-color 0.3s 0.8s, color 0.3s 0.8s;
+    }
+
+    &--text {
+      color: white;
+      transition: color 0.3s 0.7s;
+    }
+  }
+}

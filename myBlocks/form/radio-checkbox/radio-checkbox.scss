@@ -1,0 +1,43 @@
+.from {
+  &__box {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    outline: 0;
+    &:focus + .form__fake {
+      box-shadow: 0 2px 7px 4px rgba(39, 174, 95, 0.8);
+    }
+
+    &:checked + .form__fake {
+      svg {
+        fill: #27ae60;
+      }
+    }
+
+    &:disabled + .form__fake {
+      border: 4px solid #7b7979;
+      background-color: rgb(199, 196, 196);
+    }
+
+    &:disabled:checked + .form__fake {
+      svg {
+        fill: #7b7979;
+      }
+    }
+
+    &--radio {
+      &:focus + .form__fake {
+        box-shadow: 0 2px 7px 4px rgba(39, 174, 95, 0.8);
+      }
+
+      &:checked + .form__fake::after {
+        background-color: #27ae60;
+      }
+
+      &:disabled:checked + .form__fake::after {
+        background-color: #7b7979;
+      }
+    }
+  }
+}
